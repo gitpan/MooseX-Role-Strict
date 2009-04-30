@@ -1,0 +1,24 @@
+---
+name: MooseX-Role-Strict
+version: 0.01
+author:
+  - 'Curtis "Ovid" Poe <ovid@cpan.org>'
+abstract: use strict 'roles'
+license: perl
+resources:
+  license: ~
+requires:
+  Moose: 0.75
+build_requires:
+  Test::Most: 0.21
+provides:
+  MooseX::Meta::Role::Strict:
+    file: lib/MooseX/Meta/Role/Strict.pm
+    version: 0.01
+  MooseX::Role::Strict:
+    file: lib/MooseX/Role/Strict.pm
+    version: 0.01
+generated_by: Module::Build version 0.32
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
