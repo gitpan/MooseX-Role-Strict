@@ -1,5 +1,12 @@
 Revision history for MooseX-Role-Strict
 
+0.03    19-11-2009
+        - Ignore the 'meta' method.  This is now implicitly added to your
+          class.
+
+0.02    30-04-2009
+        - Make the Meta class a bit more future-proof (Sartak).
+
 0.01    30-04-2009
         - Push to github and CPAN.
         - Don't allow classes to silently override methods.
