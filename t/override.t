@@ -8,8 +8,11 @@ use lib 'lib';
 
 {
 
+use MooseX::Role::Strict ();
+
     package My::Role::Example;
-    use MooseX::Role::Strict;
+    use MooseX::Meta::Role::Strict;
+    use Moose::Role -metaclass => 'MooseX::Meta::Role::Strict';
 
     sub munge { 'munge role' }
 }
@@ -30,7 +33,7 @@ like $error, qr/\QThe class Foo has implicitly overridden the method (munge)/,
 eval <<'END_EVAL';
 package Bar;
 use Moose;
-with 'My::Role::Example' => { excludes => ['munge'] };
+with 'My::Role::Example' => { -excludes => ['munge'] };
 sub munge { 'munge bar' }
 END_EVAL
 
